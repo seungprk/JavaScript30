@@ -60,6 +60,7 @@
       const buttons = Array.from(document.querySelector('.keys').children);
       buttons.forEach((button, index) => {
         const playAnimate = () => {
+            audioTags[index].currentTime = 0;
             audioTags[index].play();
             button.className = 'key playing';
             setTimeout(() => button.className = 'key', 70);
